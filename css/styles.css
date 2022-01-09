@@ -94,10 +94,11 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .hero-title {
   font-weight: 900;
@@ -234,6 +235,32 @@ img {
   letter-spacing: var(--let-sp);
   color: var(--color-text-secondary);
   margin-top: 10px;
+}
+.team-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.team-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-icon:hover,
+.team-icon:focus {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+.team-icon:not(:last-child) {
+  margin-right: 10px;
+}
+.team-link {
+  width: 20px;
+  height: 20px;
 }
 
 /* portfolio */
