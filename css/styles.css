@@ -149,6 +149,10 @@ img {
 .features-logo {
   background: #f5f4fa;
   border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
 }
 .features-icon {
   width: 70px;
