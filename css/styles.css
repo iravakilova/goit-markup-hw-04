@@ -9,6 +9,7 @@
   --font-size-primary: 14px;
   --font-size-secondary: 16px;
   --width-container: 1200px;
+  --color-icon: #afb1b8;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -18,6 +19,7 @@ body {
 .link {
   text-decoration: none;
   color: var(--color-text-primary);
+  cursor: pointer;
 }
 .section {
   padding-top: 94px;
@@ -69,7 +71,15 @@ img {
 .header-item-menu:not(:last-child) {
   margin-right: 50px;
 }
+.header-contact {
+  display: flex;
+  margin-left: auto;
+}
+.header-item:last-child {
+  margin-left: 50px;
+}
 .header-link {
+  display: block;
   font-weight: 500;
   font-size: var(--font-size-primary);
   line-height: calc(16 / 14);
@@ -77,28 +87,34 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--color-text-secondary);
+}
+.contact-icon {
+  fill: var(--color-text-secondary);
+  margin-right: 10px;
+  vertical-align: middle;
 }
 .header-link:hover,
-.header-link:focus {
+.header-link:focus,
+.contact-icon:hover,
+.contact-icon:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-.header-item:last-child {
-  margin-left: 50px;
+.contact-mail {
+  width: 16px;
+  height: 12px;
 }
-.header-contact {
-  display: flex;
-  margin-left: auto;
-}
-.header-mail,
-.header-tel {
-  color: var(--color-text-secondary);
+.contact-tel {
+  width: 10px;
+  height: 16px;
 }
 .current {
   color: var(--accent-color);
 }
 .hero {
+  background: linear-gradient(#c4c4c4, rgba(47, 48, 58, 0.4));
   background-image: url(../images/hero-img.jpg);
-  background-color: rgba(47, 48, 58, 0.4);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -231,33 +247,38 @@ img {
 .team-social {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 16px;
 }
-.team-icon {
+.social-link {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.team-icon:hover,
-.team-icon:focus {
-  background-color: var(--accent-color);
-}
-.team-icon:not(:last-child) {
+.social-link:not(:last-child) {
   margin-right: 10px;
 }
-.team-link {
+.social-link:hover,
+.social-link:focus {
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+.link-size {
   width: 20px;
   height: 20px;
 }
-.team-link:hover,
-.team-link:focus {
+.social-icon {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  fill: var(--color-icon);
+}
+.social-icon:hover,
+.social-icon:focus {
   fill: #ffffff;
 }
-
 /* clients */
 
 .clients-list {
@@ -280,20 +301,21 @@ img {
 }
 .clients-item:hover,
 .clients-item:focus {
-  border: 1px solid;
-  border-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 .clients-link {
   width: 106px;
   height: 60px;
 }
-.clients-link:hover,
-.clients-link:focus {
-  background: var(--accent-color);
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--color-icon);
 }
-.team-link-color:hover,
-.team-link-color:focus {
-  fill: #ffffff;
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* portfolio */
@@ -374,6 +396,11 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-inner {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -404,4 +431,43 @@ footer {
   line-height: calc(24 / 14);
   letter-spacing: var(--let-sp);
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-link {
+  margin-left: 70px;
+}
+.footer-welcome {
+  font-weight: 700;
+  font-size: var(--font-size-primary);
+  line-height: calc(16 / 14);
+  letter-spacing: var(--let-sp);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: start;
+}
+.social-link-contact {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-link-contact:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link-contact:hover,
+.social-link-contact:focus {
+  background: var(--accent-color);
+}
+
+.social-icon-contact {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
 }
